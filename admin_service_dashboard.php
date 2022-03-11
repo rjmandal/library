@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
 
 <head>
@@ -35,13 +31,65 @@
     }
 
     ?>
+    <!-- ***********************************************side bar************************************************
+    ********************************************************************************************************* -->
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class="fas fa-book"></i>
+                <div class="logo_name">Library M</div>
+            </div>
+        </div>
+        <ul class="nav-list">
 
+            <li>
+                <Button><i class="fas fa-home"></i> Admin</Button>
+            </li>
+            <li>
+                <Button class="links_name" onclick="openpart('addbook')"><i class="fas fa-plus-square"></i>Add Book</Button>
+            </li>
+            <li>
+                <Button onclick="openpart('bookreport')"><i class="fas fa-book"></i> Book Report</Button>
+            </li>
+            <li>
+                <Button onclick="openpart('bookrequestapprove')"> <i class="fas fa-heart"></i>Book Requests</Button>
+            </li>
+            <li>
+                <Button onclick="openpart('addperson')"><i class="fas fa-plus-square"></i> Add Person</Button>
+            </li>
+            <li>
+                <Button onclick="openpart('studentrecord')"><i class="fas fa-history"></i> Student Report</Button>
+            </li>
+            <li>
+                <Button onclick="openpart('issuebook')"><i class="fas fa-cog"></i> Issue Book</Button>
+            </li>
+            <li>
+                <Button onclick="openpart('issuebookreport')"><i class="fas fa-history"></i> Issue Report</Button>
+            </li>
+
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="images\sanjay.png" alt="">
+                    <div class="name_job">
+                        <div class="name">SANJAY MANDAL</div>
+                        <div class="job">Admin</div>
+                    </div>
+                </div>
+
+                <Button><a href="index.php"><i class="fas fa-sign-out-alt" id="Log_out"></i></a></Button>
+            </div>
+        </div>
+    </div>
+    <!-- *********************************************************************************************************
+    ********************************************************************************************************* -->
 
 
     <div class="container">
         <div class="innerdiv">
-            <div class="row"><img class="imglogo" src="images/logo.png" /></div>
-            <div class="leftinnerdiv">
+            <!-- <div class="row"><img class="imglogo" src="images/logo.png" /></div> -->
+            <!-- <div class="leftinnerdiv">
                 <Button class="greenbtn"> ADMIN</Button>
                 <Button class="greenbtn" onclick="openpart('addbook')">ADD BOOK</Button>
                 <Button class="greenbtn" onclick="openpart('bookreport')"> BOOK REPORT</Button>
@@ -51,11 +99,11 @@
                 <Button class="greenbtn" onclick="openpart('issuebook')"> ISSUE BOOK</Button>
                 <Button class="greenbtn" onclick="openpart('issuebookreport')"> ISSUE REPORT</Button>
                 <a href="index.php"><Button class="greenbtn"> LOGOUT</Button></a>
-            </div>
+            </div> -->
 
             <div class="rightinnerdiv">
                 <div id="bookrequestapprove" class="innerright portion" style="display:none">
-                    <Button class="greenbtn">BOOK REQUEST APPROVE</Button>
+                    <Button class="greenbtn">Approve Book Requests </Button>
 
                     <?php
                     $u = new data;
@@ -63,7 +111,7 @@
                     $u->requestbookdata();
                     $recordset = $u->requestbookdata();
 
-                    $table = "<table style='font-family: Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;'><tr><th style='  border: 1px solid #ddd;
+                    $table = "<table style='font-family: Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;'><tr><th style='  border: 0px solid #ddd;
             padding: 8px;'>Person Name</th><th>person type</th><th>Book name</th><th>Days </th><th>Approve</th></tr>";
                     foreach ($recordset as $row) {
                         $table .= "<tr>";
@@ -95,52 +143,58 @@
                                                                     } else {
                                                                         echo "";
                                                                     } ?>">
-                    <Button class="greenbtn">ADD NEW BOOK</Button>
-                    <form action="addbookserver_page.php" method="post" enctype="multipart/form-data">
-                        <label>Book Name:</label><input type="text" name="bookname" />
-                        </br>
-                        <label>Detail:</label><input type="text" name="bookdetail" /></br>
-                        <label>Autor:</label><input type="text" name="bookaudor" /></br>
-                        <label>Publication</label><input type="text" name="bookpub" /></br>
-                        <div>Branch:<input type="radio" name="branch" value="other" />other<input type="radio" name="branch" value="BSIT" />BSIT<div style="margin-left:80px"><input type="radio" name="branch" value="BSCS" />BSCS<input type="radio" name="branch" value="BSSE" />BSSE</div>
-                        </div>
-                        <label>Price:</label><input type="number" name="bookprice" /></br>
-                        <label>Quantity:</label><input type="number" name="bookquantity" /></br>
-                        <label>Book Photo</label><input type="file" name="bookphoto" /></br>
-                        </br>
+                    <Button class="greenbtn">Add New Book</Button>
+                    <div class="anb">
+                        <form action="addbookserver_page.php" method="post" enctype="multipart/form-data">
 
-                        <input type="submit" value="SUBMIT" />
-                        </br>
-                        </br>
+                            <label>Book Name:</label><input class="intpt" type="text" name="bookname" />
+                            </br><br>
+                            <label>Detail:</label><input class="intpt" type="text" name="bookdetail" /></br><br>
+                            <label>Autor:</label><input class="intpt" type="text" name="bookaudor" /></br><br>
+                            <label>Publication</label><input class="intpt" type="text" name="bookpub" /></br>
+                            <div>Branch:<input type="radio" name="branch" value="other" />other<input type="radio" name="branch" value="BSIT" />BSIT<div style="margin-left:80px"><input type="radio" name="branch" value="BSCS" />BSCS<input type="radio" name="branch" value="BSSE" />BSSE</div>
+                            </div>
+                            <label>Price:</label><input class="intpt" type="number" name="bookprice" /></br><br>
+                            <label>Quantity:</label><input class="intpt" type="number" name="bookquantity" /></br><br>
+                            <label>Book Photo</label><input class="intpt bp" type="file" name="bookphoto" /></br>
+                            </br>
 
-                    </form>
+                            <input class="submit" type="submit" value="SUBMIT" />
+                            </br>
+                            </br>
+
+                        </form>
+                    </div>
                 </div>
             </div>
 
 
             <div class="rightinnerdiv">
                 <div id="addperson" class="innerright portion" style="display:none">
-                    <Button class="greenbtn">ADD Person</Button>
-                    <form action="addpersonserver_page.php" method="post" enctype="multipart/form-data">
-                        <label>Name:</label><input type="text" name="addname" />
-                        </br>
-                        <label>Pasword:</label><input type="pasword" name="addpass" />
-                        </br>
-                        <label>Email:</label><input type="email" name="addemail" /></br>
-                        <label for="typw">Choose type:</label>
-                        <select name="type">
-                            <option value="student">student</option>
-                            <option value="teacher">teacher</option>
-                        </select>
-
-                        <input type="submit" value="SUBMIT" />
-                    </form>
+                    <Button class="greenbtn">Add Person</Button>
+                    <div class="ap">
+                        <form action="addpersonserver_page.php" method="post" enctype="multipart/form-data">
+                            <label>Name:</label><input type="text" name="addname" />
+                            </br><br>
+                            <label>Pasword:</label><input type="pasword" name="addpass" />
+                            </br><br>
+                            <label>Email:</label><input type="email" name="addemail" /></br><br>
+                            <label for="typw">Choose type:</label>
+                            <select name="type">
+                                <option value="student">student</option>
+                                <option value="teacher">teacher</option>
+                            </select>
+                            <br><br>
+                            <input class="submit" type="submit" value="SUBMIT" />
+                            <br><br>
+                        </form>
+                    </div>
                 </div>
             </div>
 
             <div class="rightinnerdiv">
                 <div id="studentrecord" class="innerright portion" style="display:none">
-                    <Button class="greenbtn">Student RECORD</Button>
+                    <Button class="greenbtn">Student Record</Button>
 
                     <?php
                     $u = new data;
@@ -148,7 +202,7 @@
                     $u->userdata();
                     $recordset = $u->userdata();
 
-                    $table = "<table style='font-family: Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;'><tr><th style='  border: 1px solid #ddd;
+                    $table = "<table style='font-family: Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;'><tr><th style='  border: 0px solid #ddd;
             padding: 8px;'> Name</th><th>Email</th><th>Type</th></tr>";
                     foreach ($recordset as $row) {
                         $table .= "<tr>";
@@ -178,7 +232,7 @@
                     $u->issuereport();
                     $recordset = $u->issuereport();
 
-                    $table = "<table style='font-family: Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;'><tr><th style='  border: 1px solid #ddd;
+                    $table = "<table style='font-family: Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;'><tr><th style='  border: 0px solid #ddd;
             padding: 8px;'>Issue Name</th><th>Book Name</th><th>Issue Date</th><th>Return Date</th><th>Fine</th></th><th>Issue Type</th></tr>";
 
                     foreach ($recordset as $row) {
@@ -207,40 +261,44 @@
 issue book -->
             <div class="rightinnerdiv">
                 <div id="issuebook" class="innerright portion" style="display:none">
-                    <Button class="greenbtn">ISSUE BOOK</Button>
-                    <form action="issuebook_server.php" method="post" enctype="multipart/form-data">
-                        <label for="book">Choose Book:</label>
-                        <select name="book">
-                            <?php
-                            $u = new data;
-                            $u->setconnection();
-                            $u->getbookissue();
-                            $recordset = $u->getbookissue();
-                            foreach ($recordset as $row) {
+                    <Button class="greenbtn">Issue Book</Button>
+                    <div class="ib">
+                        <form action="issuebook_server.php" method="post" enctype="multipart/form-data">
+                            <label for="book">Choose Book:</label>
+                            <select name="book">
+                                <?php
+                                $u = new data;
+                                $u->setconnection();
+                                $u->getbookissue();
+                                $recordset = $u->getbookissue();
+                                foreach ($recordset as $row) {
 
-                                echo "<option value='" . $row[2] . "'>" . $row[2] . "</option>";
-                            }
-                            ?>
-                        </select>
-
-                        <label for="Select Student">:</label>
-                        <select name="userselect">
-                            <?php
-                            $u = new data;
-                            $u->setconnection();
-                            $u->userdata();
-                            $recordset = $u->userdata();
-                            foreach ($recordset as $row) {
-                                $id = $row[0];
-                                echo "<option value='" . $row[1] . "'>" . $row[1] . "</option>";
-                            }
-                            ?>
-                        </select>
-                        <br>
-                        Days<input type="number" name="days" />
-
-                        <input type="submit" value="SUBMIT" />
-                    </form>
+                                    echo "<option value='" . $row[2] . "'>" . $row[2] . "</option>";
+                                }
+                                ?>
+                            </select>
+                            <br><br>
+                            <label for="">Name</label>
+                            <label for="Select Student">:</label>
+                            <select name="userselect">
+                                <?php
+                                $u = new data;
+                                $u->setconnection();
+                                $u->userdata();
+                                $recordset = $u->userdata();
+                                foreach ($recordset as $row) {
+                                    $id = $row[0];
+                                    echo "<option value='" . $row[1] . "'>" . $row[1] . "</option>";
+                                }
+                                ?>
+                            </select>
+                            <br><br>
+                            Days<input type="number" name="days" />
+                            <br><br>
+                            <input class="submit" type="submit" value="SUBMIT" />
+                            <br><br>
+                        </form>
+                    </div>
                 </div>
             </div>
 
@@ -251,7 +309,7 @@ issue book -->
                                                                             echo "display:none";
                                                                         } ?>">
 
-                    <Button class="greenbtn">BOOK DETAIL</Button>
+                    <Button class="greenbtn">Book Details</Button>
                     </br>
                     <?php
                     $u = new data;
@@ -274,17 +332,18 @@ issue book -->
                     }
                     ?>
 
-                    <img width='150px' height='150px' style='border:1px solid #333333; float:left;margin-left:20px' src="uploads/<?php echo $bookimg ?> " />
-                    </br>
-                    <p style="color:black"><u>Book Name:</u> &nbsp&nbsp<?php echo $bookname ?></p>
-                    <p style="color:black"><u>Book Detail:</u> &nbsp&nbsp<?php echo $bookdetail ?></p>
-                    <p style="color:black"><u>Book Authour:</u> &nbsp&nbsp<?php echo $bookauthour ?></p>
-                    <p style="color:black"><u>Book Publisher:</u> &nbsp&nbsp<?php echo $bookpub ?></p>
-                    <p style="color:black"><u>Book Branch:</u> &nbsp&nbsp<?php echo $branch ?></p>
-                    <p style="color:black"><u>Book Price:</u> &nbsp&nbsp<?php echo $bookprice ?></p>
-                    <p style="color:black"><u>Book Available:</u> &nbsp&nbsp<?php echo $bookava ?></p>
-                    <p style="color:black"><u>Book Rent:</u> &nbsp&nbsp<?php echo $bookrent ?></p>
-
+                    <img class="bkd-img" src="uploads/<?php echo $bookimg ?> " />
+                    <!-- </br> -->
+                    <div class="bd">
+                        <p class="bkd"><u>Book Name:</u> &nbsp&nbsp<?php echo $bookname ?></p>
+                        <p class="bkd line"><u>Book Detail:</u> &nbsp&nbsp<?php echo $bookdetail ?></p>
+                        <p class="bkd"><u>Book Authour:</u> &nbsp&nbsp<?php echo $bookauthour ?></p>
+                        <p class="bkd"><u>Book Publisher:</u> &nbsp&nbsp<?php echo $bookpub ?></p>
+                        <p class="bkd"><u>Book Branch:</u> &nbsp&nbsp<?php echo $branch ?></p>
+                        <p class="bkd"><u>Book Price:</u> &nbsp&nbsp<?php echo $bookprice ?></p>
+                        <p class="bkd"><u>Book Available:</u> &nbsp&nbsp<?php echo $bookava ?></p>
+                        <p class="bkd"><u>Book Rent:</u> &nbsp&nbsp<?php echo $bookrent ?></p>
+                    </div>
 
                 </div>
             </div>
@@ -292,15 +351,15 @@ issue book -->
 
 
             <div class="rightinnerdiv">
-                <div id="bookreport" class="innerright portion" style="display:none">
-                    <Button class="greenbtn">BOOK RECORD</Button>
+                <div id="bookreport" class="innerright portion">
+                    <Button class="greenbtn">Book Record</Button>
                     <?php
                     $u = new data;
                     $u->setconnection();
                     $u->getbook();
                     $recordset = $u->getbook();
 
-                    $table = "<table style='font-family: Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;'><tr><th style='  border: 1px solid #ddd;
+                    $table = "<table style='font-family: Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;'><tr><th style='  border: 0px solid #ddd;
             padding: 8px;'>Book Name</th><th>Price</th><th>Qnt</th><th>Available</th><th>Rent</th></th><th>View</th></tr>";
                     foreach ($recordset as $row) {
                         $table .= "<tr>";
@@ -328,9 +387,8 @@ issue book -->
         </div>
     </div>
 
-
-
     <script src="admin_service_dashboard.js"></script>
+    <script src="https://kit.fontawesome.com/d35fbd3f4e.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

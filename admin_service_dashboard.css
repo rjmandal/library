@@ -1,54 +1,235 @@
-.innerright,label {
-    color: rgb(16, 170, 16);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&family=Poppins:wght@500&family=Roboto&display=swap');
+
+/* font-family: 'Montserrat',
+sans-serif;
+font-family: 'Poppins',
+sans-serif;
+font-family: 'Roboto',
+sans-serif; */
+
+body{
+    background-color: white;
+}
+/* ************************sidebar*************************************************
+********************************************************************* ***********/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 240px;
+    background: #11101d;
+    padding-top: 6px 14px;
+    transition: all 0.5s ease;
+}
+.sidebar .logo_content .logo {
+    color: #fff;
+    display: flex;
+    height: 90px;
+    width: 100%;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    opacity: 1;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.logo_content .logo i {
+    font-size: 48px;
+    margin-right: 5px;
+}
+
+.logo_content .logo .logo_name {
+    font-size: 30px;
+    font-weight: 400;
+}
+.sidebar .nav-list{
+    list-style: none;
+    padding-left: 10px;
+}
+.sidebar ul li button {
+    color: white;
+    background-color:#11101d;
+    border: none;
+    outline: none;
+    display: flex;
+     font-family: 'Montserrat',
+     sans-serif;
+    text-decoration: none;
+    align-items: center;
+    transition: all 0.4s ease;
+    border-radius: 22px;
+    width: 95%;
+    white-space: nowrap;
+}
+.sidebar ul li button:hover {
+    color: green;
+    background: #fff;
+    cursor: pointer;
     font-weight: bold;
 }
 
-.container,
-.row,
-.imglogo {
-    margin: auto;
+.sidebar ul li i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
 }
+
+.sidebar .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebar .profile_content {
+    position: absolute;
+    color: #fff;
+    bottom:0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar .profile_content .profile {
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: none;
+    transition: all 0.4s ease;
+    background: #1d1b31;
+}
+.profile_content .profile .profile_details {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    pointer-events: auto;
+    white-space: nowrap;
+}
+.profile .profile_details img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid rgba(232, 232, 240, 0.2);
+}
+
+.profile .profile_details .name_job {
+    margin-left: 10px;
+}
+
+.profile .profile_details .name {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.profile .profile_details .job {
+    font-size: 12px;
+}
+
+.profile #Log_out{
+    position: absolute;
+    left: 88%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+    background: none;
+}
+.profile #Log_out:hover{
+    color: white;
+}
+/* .home_content {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+} */
+
+/* ************************************************************************************************
+********************************************************************* ***********/
+
+/* ***************************************add new book**************************************************
+********************************************************************* ***********/
+.anb {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.intpt{
+    width: 50%;
+    
+}
+.bp{
+    cursor: pointer;
+}
+.submit{
+    margin: auto;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ************************************************************************************************
+********************************************************************* ***********/
+.innerright,label {
+    color: wheat;
+    font-weight: bold;
+}
+
+/* .container,.row,.imglogo {
+    margin: auto;
+} */
 
 .innerdiv {
     text-align: center;
-    /* width: 500px; */
-    margin: 100px;
+    width: 100%;
+    margin-top: 80px;
 }
 
 input {
-    margin-left: 20px;
+    margin:0px 20px;
+    border-radius: 12px;
 }
-
-.leftinnerdiv {
-    float: left;
-    width: 25%;
-}
-
 .rightinnerdiv {
     float: right;
-    width: 75%;
+    width: 95%;
 }
 
 .innerright {
-    background-color: rgb(105, 221, 105);
+    background-color: #1D1B31;
+    border-radius: 12px;
+    border: 4px solid rgba(232, 232, 240, 0.2);
 }
-
+#bookreport {
+    display:none;
+}
 .greenbtn {
-    background-color: rgb(16, 170, 16);
-    color: white;
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    font-family: 'Roboto',
+    sans-serif;
+    font-size: x-large;
     width: 95%;
     height: 40px;
     margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 8px;
 }
 
-.greenbtn,a {
+/* .greenbtn,a {
     text-decoration: none;
     color: white;
     font-size: large;
-}
+} */
 
 th {
-    background-color: orange;
+    background-color:orange;
     color: black;
 }
 
@@ -59,4 +240,36 @@ td {
 
 td,a {
     color: black;
+}
+/* ************************************book details******************************************************
+********************************************************************* ***********/
+.bd{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bkd-img{
+width:190px;
+height:300px;
+float:left;
+margin:0px 30px 0px 20px;
+border-radius: 12px;
+border: 4px solid rgba(232, 232, 240, 0.2);
+}
+.bkd{
+    color: white;
+}
+ p u{
+    text-decoration: none;
+    font-family: 'Poppins',
+    sans-serif;
+    color: wheat;
+}
+/* ************************************************************************************************
+********************************************************************* ***********/
+.ib,.ap{
+    text-align: left;
+     margin-top: 20px;
+     margin-left: 400px;
 }
