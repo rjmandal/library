@@ -174,13 +174,13 @@
                     <Button class="greenbtn">Add Person</Button>
                     <div class="ap">
                         <form action="addpersonserver_page.php" method="post" enctype="multipart/form-data">
-                            <label>Name:</label><input type="text" name="addname" />
+                            <label>Name:</label><input class="intpt" type="text" name="addname" />
                             </br><br>
-                            <label>Pasword:</label><input type="pasword" name="addpass" />
+                            <label>Pasword:</label><input class="intpt" type="pasword" name="addpass" />
                             </br><br>
-                            <label>Email:</label><input type="email" name="addemail" /></br><br>
+                            <label>Email:</label><input class="intpt" type="email" name="addemail" /></br><br>
                             <label for="typw">Choose type:</label>
-                            <select name="type">
+                            <select class="intpt" name="type">
                                 <option value="student">student</option>
                                 <option value="teacher">teacher</option>
                             </select>
@@ -265,7 +265,7 @@ issue book -->
                     <div class="ib">
                         <form action="issuebook_server.php" method="post" enctype="multipart/form-data">
                             <label for="book">Choose Book:</label>
-                            <select name="book">
+                            <select class="intpt" name="book">
                                 <?php
                                 $u = new data;
                                 $u->setconnection();
@@ -273,14 +273,14 @@ issue book -->
                                 $recordset = $u->getbookissue();
                                 foreach ($recordset as $row) {
 
-                                    echo "<option value='" . $row[2] . "'>" . $row[2] . "</option>";
+                                    echo "<option  value='" . $row[2] . "'>" . $row[2] . "</option>";
                                 }
                                 ?>
                             </select>
                             <br><br>
                             <label for="">Name</label>
                             <label for="Select Student">:</label>
-                            <select name="userselect">
+                            <select class="intpt" name="userselect">
                                 <?php
                                 $u = new data;
                                 $u->setconnection();
@@ -293,7 +293,7 @@ issue book -->
                                 ?>
                             </select>
                             <br><br>
-                            Days<input type="number" name="days" />
+                            Days<input class="intpt" type="number" name="days" />
                             <br><br>
                             <input class="submit" type="submit" value="SUBMIT" />
                             <br><br>

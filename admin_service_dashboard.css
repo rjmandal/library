@@ -162,16 +162,34 @@ body{
 }
 .intpt{
     width: 50%;
+    height: 35px;
+    /* border-radius: 28px; */
     
 }
 .bp{
     cursor: pointer;
 }
 .submit{
-    margin: auto;
-    font-size: large;
-    font-weight: bold;
     cursor: pointer;
+    color: white;
+    background-color:#11101d;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat',
+    sans-serif;
+    transition: all 0.4s ease;
+    border-radius: 18px;
+    width: 15%;
+    height: 40px;
+    margin: auto;
+    white-space: nowrap;
+
+}
+.submit:hover {
+    color: green;
+    background: #fff;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 /* ************************************************************************************************
@@ -203,7 +221,9 @@ input {
 .innerright {
     background-color: #1D1B31;
     border-radius: 12px;
-    border: 4px solid rgba(232, 232, 240, 0.2);
+    border-top: 4px solid rgba(232, 232, 240, 0.2);
+    border-left: 4px solid rgba(232, 232, 240, 0.2);
+    border-right: 4px solid rgba(232, 232, 240, 0.2);
 }
 #bookreport {
     display:none;
@@ -219,7 +239,8 @@ input {
     height: 40px;
     margin-top: 8px;
     margin-bottom: 8px;
-    border-radius: 8px;
+    /* border-radius: 12px;
+    border: 4px solid rgba(232, 232, 240, 0.2); */
 }
 
 /* .greenbtn,a {
