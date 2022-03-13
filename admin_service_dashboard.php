@@ -179,10 +179,10 @@
                             <label>Pasword:</label><input class="intpt" type="pasword" name="addpass" />
                             </br><br>
                             <label>Email:</label><input class="intpt" type="email" name="addemail" /></br><br>
-                            <label for="typw">Choose type:</label>
+                            <label for="typw">Choose Type:</label>
                             <select class="intpt" name="type">
-                                <option value="student">student</option>
-                                <option value="teacher">teacher</option>
+                                <option value="student">Student</option>
+                                <option value="teacher">Teacher</option>
                             </select>
                             <br><br>
                             <input class="submit" type="submit" value="SUBMIT" />
@@ -194,7 +194,7 @@
 
             <div class="rightinnerdiv">
                 <div id="studentrecord" class="innerright portion" style="display:none">
-                    <Button class="greenbtn">Student Record</Button>
+                    <Button class="greenbtn">Person Record</Button>
 
                     <?php
                     $u = new data;
@@ -224,7 +224,7 @@
 
             <div class="rightinnerdiv">
                 <div id="issuebookreport" class="innerright portion" style="display:none">
-                    <Button class="greenbtn">Issue Book Record</Button>
+                    <Button class="greenbtn">Issued Books Record</Button>
 
                     <?php
                     $u = new data;
@@ -261,7 +261,7 @@
 issue book -->
             <div class="rightinnerdiv">
                 <div id="issuebook" class="innerright portion" style="display:none">
-                    <Button class="greenbtn">Issue Book</Button>
+                    <Button class="greenbtn">Issue Books</Button>
                     <div class="ib">
                         <form action="issuebook_server.php" method="post" enctype="multipart/form-data">
                             <label for="book">Choose Book:</label>
