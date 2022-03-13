@@ -8,7 +8,7 @@ font-family: 'Roboto',
 sans-serif; */
 
 body{
-    background-color: white;
+    background-color: wheat ;
 }
 /* ************************sidebar*************************************************
 ********************************************************************* ***********/
@@ -64,7 +64,7 @@ body{
     white-space: nowrap;
 }
 .sidebar ul li button:hover {
-    color: green;
+    color: wheat;
     background: #fff;
     cursor: pointer;
     font-weight: bold;
@@ -186,7 +186,7 @@ body{
 
 }
 .submit:hover {
-    color: green;
+    color: wheat;
     background: #fff;
     cursor: pointer;
     font-weight: bold;
@@ -221,15 +221,13 @@ input {
 .innerright {
     background-color: #1D1B31;
     border-radius: 12px;
-    border-top: 4px solid rgba(232, 232, 240, 0.2);
-    border-left: 4px solid rgba(232, 232, 240, 0.2);
-    border-right: 4px solid rgba(232, 232, 240, 0.2);
+    border: 4px solid rgba(232, 232, 240, 0.2);
 }
 #bookreport {
     display:none;
 }
 .greenbtn {
-    background-color: white;
+    background-color: wheat;
     color: black;
     font-weight: bolder;
     font-family: 'Roboto',
@@ -239,8 +237,8 @@ input {
     height: 40px;
     margin-top: 8px;
     margin-bottom: 8px;
-    /* border-radius: 12px;
-    border: 4px solid rgba(232, 232, 240, 0.2); */
+    border-radius: 12px;
+    border: 4px solid rgba(232, 232, 240, 0.2);
 }
 
 /* .greenbtn,a {

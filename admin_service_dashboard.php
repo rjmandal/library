@@ -8,8 +8,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="admin_service_dashboard.css">
 </head>
 
@@ -58,7 +56,7 @@
                 <Button onclick="openpart('addperson')"><i class="fas fa-plus-square"></i> Add Person</Button>
             </li>
             <li>
-                <Button onclick="openpart('studentrecord')"><i class="fas fa-history"></i> Student Report</Button>
+                <Button onclick="openpart('studentrecord')"><i class="fas fa-history"></i> Person Report</Button>
             </li>
             <li>
                 <Button onclick="openpart('issuebook')"><i class="fas fa-cog"></i> Issue Book</Button>
@@ -88,19 +86,6 @@
 
     <div class="container">
         <div class="innerdiv">
-            <!-- <div class="row"><img class="imglogo" src="images/logo.png" /></div> -->
-            <!-- <div class="leftinnerdiv">
-                <Button class="greenbtn"> ADMIN</Button>
-                <Button class="greenbtn" onclick="openpart('addbook')">ADD BOOK</Button>
-                <Button class="greenbtn" onclick="openpart('bookreport')"> BOOK REPORT</Button>
-                <Button class="greenbtn" onclick="openpart('bookrequestapprove')"> BOOK REQUESTS</Button>
-                <Button class="greenbtn" onclick="openpart('addperson')"> ADD STUDENT</Button>
-                <Button class="greenbtn" onclick="openpart('studentrecord')"> STUDENT REPORT</Button>
-                <Button class="greenbtn" onclick="openpart('issuebook')"> ISSUE BOOK</Button>
-                <Button class="greenbtn" onclick="openpart('issuebookreport')"> ISSUE REPORT</Button>
-                <a href="index.php"><Button class="greenbtn"> LOGOUT</Button></a>
-            </div> -->
-
             <div class="rightinnerdiv">
                 <div id="bookrequestapprove" class="innerright portion" style="display:none">
                     <Button class="greenbtn">Approve Book Requests </Button>
@@ -389,6 +374,9 @@ issue book -->
 
     <script src="admin_service_dashboard.js"></script>
     <script src="https://kit.fontawesome.com/d35fbd3f4e.js" crossorigin="anonymous"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 
 </html>
