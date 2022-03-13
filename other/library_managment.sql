@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 01, 2021 at 05:28 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Generation Time: Mar 13, 2022 at 01:42 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `email`, `pass`) VALUES
-(1, 'idno22381@gmail.com', '123');
+(1, 'sam@gmail.com', 'sam');
 
 -- --------------------------------------------------------
 
@@ -65,9 +65,9 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`id`, `bookpic`, `bookname`, `bookdetail`, `bookaudor`, `bookpub`, `branch`, `bookprice`, `bookquantity`, `bookava`, `bookrent`) VALUES
-(4, 'arrow.jpg', 'Scott Gallagher', '1st edition', 'no idea', 'Suscipit', 'it', '756', '20', 16, 4),
-(5, 'logo.png', 'Ferris Mclaughlin', 'Qui ex dolor fugiat ', 'Est voluptates offi', 'Dolorem earum accusa', 'electrical', '264', '157', 157, 0),
-(6, 'arrow.png', 'harry', 'Ea quas nulla ration', 'Ut dolorem culpa ex', 'Eum proident quidem', 'it', '76', '3', 2, 1);
+(7, '9781250014450.jpg', 'STEVE JOBS', 'THE BOOK INSPIRED THE MOVIE', 'WALTER ISAACSON', 'ABACUS', 'other', '599', '100', 100, 0),
+(8, 'Books1 - Copy.jpeg', 'PSYCHOLOGY OF MONEY', 'Timeless lesson on wealth, greed ,and happiness', 'MORGAN HOUSEL', 'A JAICO BOOKS', '', '499', '100', 100, 0),
+(9, 'Books1 - Copy (2).jpeg', 'THE POWER OF SUBCONSCIOUS', 'The Power of Your Subconscious Mind has been a bestseller since its first publication in 1963', 'Joseph Murphy', ' 1963', 'other', '399', '100', 100, 0);
 
 -- --------------------------------------------------------
 
@@ -86,18 +86,6 @@ CREATE TABLE `issuebook` (
   `issuereturn` varchar(25) NOT NULL,
   `fine` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `issuebook`
---
-
-INSERT INTO `issuebook` (`id`, `userid`, `issuename`, `issuebook`, `issuetype`, `issuedays`, `issuedate`, `issuereturn`, `fine`) VALUES
-(2, 1, 'salman', 'Rich daddy poor dady', 'student', 3, '30/03/2021', '02/04/2021', 1800),
-(3, 2, 'Randall Burch', 'Scott Gallagher', 'teacher', 4, '30/03/2021', '03/04/2021', 0),
-(6, 1, 'salman', 'Scott Gallagher', 'student', 7, '30/03/2021', '06/04/2021', 1800),
-(9, 5, 'salmannew', 'Scott Gallagher', 'teacher', 21, '30/03/2021', '20/04/2021', 0),
-(10, 1, 'salman', 'Scott Gallagher', 'student', 7, '01/04/2021', '08/04/2021', 0),
-(11, 1, 'salman', 'harry', 'student', 7, '01/04/2021', '08/04/2021', 0);
 
 -- --------------------------------------------------------
 
@@ -134,10 +122,10 @@ CREATE TABLE `userdata` (
 --
 
 INSERT INTO `userdata` (`id`, `name`, `email`, `pass`, `type`) VALUES
-(1, 'salman', 'idno22382@gmail.com', '123', 'student'),
-(2, 'Randall Burch', 'voqo@mailinator.com', 'Ratione nulla dolore', 'teacher'),
-(3, 'Gabriel Daugherty', 'bipacer@mailinator.com', 'Voluptas explicabo ', 'teacher'),
-(5, 'salmannew', '1234@gmail.com', '123', 'teacher');
+(6, 'sanjay', 'sanjay@gmail.com', 'sam', 'student'),
+(7, 'Priyanshu', 'priyansh@gmail.com', 'sam', 'student'),
+(8, 'ravi', 'ravi@gmail.com', 'sam', 'student'),
+(9, 'Rahul', 'rahul@gmail.com', 'sam', 'student');
 
 --
 -- Indexes for dumped tables
@@ -190,7 +178,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `book`
 --
 ALTER TABLE `book`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `issuebook`
@@ -208,7 +196,7 @@ ALTER TABLE `requestbook`
 -- AUTO_INCREMENT for table `userdata`
 --
 ALTER TABLE `userdata`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
