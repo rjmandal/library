@@ -17,13 +17,13 @@ body{
     top: 0;
     left: 0;
     height: 100%;
-    width: 240px;
+    width: 300px;
     background: #11101d;
     padding-top: 6px 14px;
     transition: all 0.5s ease;
 }
 .sidebar .logo_content .logo {
-    color: #fff;
+    color: orange;
     display: flex;
     height: 90px;
     width: 100%;
@@ -41,8 +41,8 @@ body{
 }
 
 .logo_content .logo .logo_name {
-    font-size: 30px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: bolder;
 }
 .sidebar .nav-list{
     list-style: none;
@@ -54,18 +54,19 @@ body{
     border: none;
     outline: none;
     display: flex;
+    font-size:large;
      font-family: 'Montserrat',
      sans-serif;
     text-decoration: none;
     align-items: center;
     transition: all 0.4s ease;
     border-radius: 22px;
-    width: 95%;
+    width: 90%;
     white-space: nowrap;
 }
 .sidebar ul li button:hover {
-    color: wheat;
-    background: #fff;
+    color: white;
+    background: orange;
     cursor: pointer;
     font-weight: bold;
 }
@@ -142,13 +143,6 @@ body{
 .profile #Log_out:hover{
     color: white;
 }
-/* .home_content {
-    position: absolute;
-    height: 100%;
-    width: calc(100% - 78px);
-    left: 78px;
-    transition: all 0.5s ease;
-} */
 
 /* ************************************************************************************************
 ********************************************************************* ***********/
@@ -158,13 +152,11 @@ body{
 .anb {
     text-align: left;
     margin-top: 20px;
-    margin-left: 30px;
+ margin-left: 225px; 
 }
 .intpt{
     width: 50%;
     height: 35px;
-    /* border-radius: 28px; */
-    
 }
 .bp{
     cursor: pointer;
@@ -179,14 +171,14 @@ body{
     sans-serif;
     transition: all 0.4s ease;
     border-radius: 18px;
-    width: 15%;
+    width: 25%;
     height: 40px;
     margin: auto;
     white-space: nowrap;
 
 }
 .submit:hover {
-    color: wheat;
+    color: #11101d;
     background: #fff;
     cursor: pointer;
     font-weight: bold;
@@ -194,9 +186,13 @@ body{
 
 /* ************************************************************************************************
 ********************************************************************* ***********/
+/* .container{
+    background-color: orange;
+} */
 .innerright,label {
     color: wheat;
     font-weight: bold;
+    font-size: large;
 }
 
 /* .container,.row,.imglogo {
@@ -206,7 +202,7 @@ body{
 .innerdiv {
     text-align: center;
     width: 100%;
-    margin-top: 80px;
+    margin-top: 10px;
 }
 
 input {
@@ -215,7 +211,7 @@ input {
 }
 .rightinnerdiv {
     float: right;
-    width: 95%;
+    width: 80%;
 }
 
 .innerright {
@@ -226,30 +222,23 @@ input {
 #bookreport {
     display:none;
 }
-.greenbtn {
-    background-color: wheat;
-    color: black;
+.greenbtn{
+    background-color: orange;
+    color:white;
     font-weight: bolder;
-    font-family: 'Roboto',
-    sans-serif;
     font-size: x-large;
-    width: 95%;
-    height: 40px;
+    width: 90%;
+    height: 50px;
     margin-top: 8px;
     margin-bottom: 8px;
     border-radius: 12px;
     border: 4px solid rgba(232, 232, 240, 0.2);
 }
 
-/* .greenbtn,a {
-    text-decoration: none;
-    color: white;
-    font-size: large;
-} */
-
 th {
     background-color:orange;
-    color: black;
+    color: white;
+    
 }
 
 td {
@@ -289,6 +278,30 @@ border: 4px solid rgba(232, 232, 240, 0.2);
 ********************************************************************* ***********/
 .ib,.ap{
     text-align: left;
-     margin-top: 20px;
-     margin-left: 400px;
+    margin-top: 20px;
+    margin-left: 225px;
 }
+
+/* ************************************student*****************************************************
+********************************************************************* ***********/
+.person_d{
+display: flex;
+flex-direction: column;
+align-items: self-start;
+margin-left: 344px;
+}
+.person_d {
+    color: white;
+}
+/* ************************************************************************************************
+********************************************************************* ***********/
+/* ************************************************************************************************
+********************************************************************* ***********/
+/* ************************************************************************************************
+********************************************************************* ***********/
+/* ************************************************************************************************
+********************************************************************* ***********/
+/* ************************************************************************************************
+********************************************************************* ***********/
+/* ************************************************************************************************
+********************************************************************* ***********/

@@ -22,11 +22,11 @@
         $msg = $_REQUEST['msg'];
     }
 
-    if ($msg == "done") {
-        echo "<div class='alert alert-success' role='alert'>Sucssefully Done</div>";
-    } elseif ($msg == "fail") {
-        echo "<div class='alert alert-danger' role='alert'>Fail</div>";
-    }
+    // if ($msg == "done") {
+    //     echo "<div class='alert alert-success' role='alert'>Sucssefully Done</div>";
+    // } elseif ($msg == "fail") {
+    //     echo "<div class='alert alert-danger' role='alert'>Fail</div>";
+    // }
 
     ?>
     <!-- ***********************************************side bar************************************************
@@ -62,7 +62,7 @@
                 <Button onclick="openpart('issuebook')"><i class="fas fa-cog"></i> Issue Book</Button>
             </li>
             <li>
-                <Button onclick="openpart('issuebookreport')"><i class="fas fa-history"></i> Issue Report</Button>
+                <Button onclick="openpart('issuebookreport')"><i class="fas fa-history"></i> Issued Books Report</Button>
             </li>
 
         </ul>
@@ -86,6 +86,8 @@
 
     <div class="container">
         <div class="innerdiv">
+            <!-- <div class="row"><img class="imglogo" src="images/top.jpg" /></div> -->
+            
             <div class="rightinnerdiv">
                 <div id="bookrequestapprove" class="innerright portion" style="display:none">
                     <Button class="greenbtn">Approve Book Requests </Button>
@@ -166,8 +168,8 @@
                             <label>Email:</label><input class="intpt" type="email" name="addemail" /></br><br>
                             <label for="typw">Choose Type:</label>
                             <select class="intpt" name="type">
-                                <option value="student">Student</option>
-                                <option value="teacher">Teacher</option>
+                                <option value="Student">Student</option>
+                                <option value="Teacher">Teacher</option>
                             </select>
                             <br><br>
                             <input class="submit" type="submit" value="SUBMIT" />
