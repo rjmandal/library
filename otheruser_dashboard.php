@@ -184,13 +184,13 @@ $userloginid = $_SESSION["userid"] = $_GET['userlogid'];
                     $u->getbookissue();
                     $recordset = $u->getbookissue();
 
-                    $table = "<table style='font-family: Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;'><tr>
-            <th style='  border: 0px solid #ddd;padding: 10px;'>Image</th><th>Book Name</th><th>Book Authour</th><th>branch</th><th>price</th></th><th>Request Book</th></tr>";
+                    $table = "<table style='font-family: Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;'><tr >
+            <th style=' padding: 10px;'>Image</th><th>Book Name</th><th>Book Authour</th><th>Branch</th><th>Price</th></th><th>Request Book</th></tr>";
 
                     foreach ($recordset as $row) {
                         $table .= "<tr>";
                         "<td>$row[0]</td>";
-                        $table .= "<td><img src='uploads/$row[1]' width='100px' height='100px' style='border:0px solid #333333;'></td>";
+                        $table .= "<td><img src='uploads/$row[1]' width='100px' height='130px' style=' margin:10px; border-radius: 12px; border: 4px solid rgba(255, 127, 0,0.5); '></td>";
                         $table .= "<td>$row[2]</td>";
                         $table .= "<td>$row[4]</td>";
                         $table .= "<td>$row[6]</td>";
